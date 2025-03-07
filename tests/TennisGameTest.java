@@ -1,15 +1,11 @@
 import static org.junit.Assert.*;
 import org.junit.Test;
-
 public class TennisGameTest {
   
 	@Test
 	public void testTennisGame_Start() {
-		//Arrange
 		TennisGame game = new TennisGame();
-		//Act
 		String score = game.getScore() ;
-		// Assert
 		assertEquals("Initial score incorrect", "love - love", score);		
 	}
 	
@@ -111,20 +107,20 @@ public class TennisGameTest {
 	}
 	
 	@Test
-	public void testTennisGame_score0() throws TennisGameException{
+	public void testTennisGame_0() throws TennisGameException{
 		TennisGame game = new TennisGame();
 		assertEquals("love - love", game.getScore());
 	}
 	
 	@Test
-	public void testTennisGame_score1() throws TennisGameException{
+	public void testTennisGame_1() throws TennisGameException{
 		TennisGame game = new TennisGame();
 		game.player1Scored();
 		assertEquals("love - 15", game.getScore());
 	}
 	
 	@Test
-	public void testTennisGame_score2() throws TennisGameException{
+	public void testTennisGame_2() throws TennisGameException{
 		TennisGame game = new TennisGame();
 		game.player1Scored();
 		game.player1Scored();
@@ -132,7 +128,7 @@ public class TennisGameTest {
 	}
 	
 	@Test
-	public void testTennisGame_score3() throws TennisGameException{
+	public void testTennisGame_3() throws TennisGameException{
 		TennisGame game = new TennisGame();
 		game.player1Scored();
 		game.player1Scored();
